@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Casa Verde: loja virtual de plantas e vasos para deixar sua casa mais viva.">
+  <title>Casa Verde | Plantas e vasos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <a href="#inicio" class="logo">Casa Verde</a>
+    <button class="botao-menu" id="botaoMenu" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" class="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#frete">Frete</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <h1>Plantas fáceis de cuidar, entregues na sua porta</h1>
+      <p>Escolha entre suculentas, samambaias e orquídeas já plantadas em vasos prontos para decorar.</p>
+      <a href="#produtos" class="botao">Ver produtos</a>
+    </section>
+
+    <section class="vitrine" id="produtos">
+      <h2>Nossos produtos</h2>
+      <div class="grade-produtos">
+
+        <article class="produto">
+          <img src="img/suculenta.svg" alt="Suculenta verde em vaso de cerâmica laranja">
+          <h3>Suculenta Echeveria</h3>
+          <p>Aguenta bem o sol e pede pouca água.</p>
+          <p class="preco">R$ 29,90</p>
+          <button class="botao botao-pequeno">Comprar</button>
+        </article>
+
+        <article class="produto">
+          <img src="img/samambaia.svg" alt="Samambaia de folhas longas em vaso cinza">
+          <h3>Samambaia Americana</h3>
+          <p>Ótima para ambientes com luz indireta.</p>
+          <p class="preco">R$ 49,90</p>
+          <button class="botao botao-pequeno">Comprar</button>
+        </article>
+
+        <article class="produto">
+          <img src="img/cacto.svg" alt="Cacto verde com dois braços em vaso marrom">
+          <h3>Cacto Mandacaru</h3>
+          <p>Resistente e perfeito para quem esquece de regar.</p>
+          <p class="preco">R$ 39,90</p>
+          <button class="botao botao-pequeno">Comprar</button>
+        </article>
+
+        <article class="produto">
+          <img src="img/jiboia.svg" alt="Jiboia de folhas grandes em vaso azul">
+          <h3>Jiboia</h3>
+          <p>Cresce rápido e purifica o ar da casa.</p>
+          <p class="preco">R$ 44,90</p>
+          <button class="botao botao-pequeno">Comprar</button>
+        </article>
+
+        <article class="produto">
+          <img src="img/orquidea.svg" alt="Orquídea rosa em vaso branco">
+          <h3>Orquídea Phalaenopsis</h3>
+          <p>Flores bonitas que duram meses.</p>
+          <p class="preco">R$ 89,90</p>
+          <button class="botao botao-pequeno">Comprar</button>
+        </article>
+
+        <article class="produto">
+          <img src="img/bambu.svg" alt="Três hastes de bambu da sorte em vaso de madeira">
+          <h3>Bambu da Sorte</h3>
+          <p>Pode ser cultivado só na água.</p>
+          <p class="preco">R$ 34,90</p>
+          <button class="botao botao-pequeno">Comprar</button>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="frete" id="frete">
+      <h2>Calcule o frete</h2>
+      <form id="formFrete" class="caixa">
+        <label for="cep">CEP (só números)</label>
+        <input type="text" id="cep" inputmode="numeric" maxlength="8" placeholder="01001000">
+
+        <label for="valor">Valor da compra (R$)</label>
+        <input type="number" id="valor" min="0" step="0.01" placeholder="120.00">
+
+        <button type="submit" class="botao">Calcular frete</button>
+        <p id="resultadoFrete" class="resultado" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="contato" id="contato">
+      <h2>Fale com a gente</h2>
+      <form id="formContato" class="caixa" novalidate>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required minlength="3" placeholder="Seu nome">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required placeholder="voce@email.com">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required minlength="10" placeholder="Escreva sua dúvida"></textarea>
+
+        <button type="submit" class="botao">Enviar mensagem</button>
+        <p id="resultadoContato" class="resultado" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 Casa Verde. Projeto acadêmico, loja fictícia.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
