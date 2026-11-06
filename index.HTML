@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino CSS Flexbox</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #171b24;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 550px;
+            max-width: 100%;
+            padding: 15px;
+        }
+
+        p {
+            width: 100%;
+            height: auto;
+            color: white;
+            border-radius: 10px;
+            margin: 0 0 20px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            margin: 0;
+        }
+
+        #centraliza {
+            text-align: center;
+            color: white;
+            margin: 0 0 20px;
+            transition: color 0.2s;
+        }
+
+        #Napoleao {
+            height: 300px;
+            width: 200px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        /* Organização das imagens laterais e do texto */
+        .layout {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 25px;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .lateral {
+            flex: 1;
+            max-width: 220px;
+            min-width: 0;
+            align-self: center;
+        }
+
+        .lateral img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            align-self: center;
+        }
+
+        .container {
+            flex: 3;
+            width: auto;
+            max-width: 700px;
+            min-width: 0;
+        }
+
+        @media (max-width: 800px) {
+            .layout {
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .lateral {
+                display: none;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- Imagem lateral esquerda -->
+        <aside class="lateral">
+            <img
+                id="Napoleon2"
+                src="https://product-hub-prd.madeiramadeira.com.br/3203487/images/e0a4ee57-748d-4598-8108-9212062196da72032338quadrodecorativonapoleaobonaparteilustrativodesalaartemod70x40156651613392x600.jpg?ims=fit-in/1366x1366"
+                alt="Ilustração de Napoleão Bonaparte"
+            >
+        </aside>
+
+        <!-- Conteúdo central -->
+        <main class="container">
+
+            <img
+                id="Napoleao"
+                src="https://upload.wikimedia.org/wikipedia/commons/1/11/Napoleon_Bonaparte.jpg"
+                alt="Napoleão Bonaparte"
+            >
+
+            <h1>A HISTÓRIA DE NAPOLEÃO</h1>
+
+            <p id="centraliza">
+                Da Revolução ao Império: o homem que fez a Europa tremer.
+            </p>
+
+            <p>Napoleão Bonaparte foi um dos personagens mais importantes da história europeia. Nascido em 1769, na ilha da Córsega, tornou-se oficial do Exército francês e ganhou destaque durante a Revolução Francesa, iniciada em 1789. A revolução derrubou a monarquia e transformou profundamente a sociedade francesa, criando oportunidades para militares talentosos como Napoleão.</p>
+
+            <p>Em 1799, aproveitando a instabilidade política da França, Napoleão liderou um golpe de Estado que encerrou o governo do Diretório e estabeleceu o Consulado, no qual assumiu a posição de primeiro-cônsul. Durante seu governo, promoveu reformas administrativas, reorganizou o sistema educacional e fortaleceu o Estado. Uma de suas principais realizações foi o Código Napoleônico, promulgado em 1804, que consolidou princípios como a igualdade perante a lei e a proteção da propriedade privada, embora também reforçasse a autoridade masculina dentro da família.</p>
+
+            <p>Em 1804, Napoleão coroou a si mesmo imperador dos franceses, iniciando uma fase de expansão militar. Seus exércitos conquistaram territórios e derrotaram diversas coalizões de potências europeias, incluindo Áustria e Prússia. No auge de seu poder, Napoleão controlava diretamente ou influenciava grande parte da Europa continental. Entretanto, suas guerras provocaram milhões de mortes, aumentaram a resistência dos povos dominados e mantiveram o continente em constante conflito.</p>
+
+            <p>Uma das maiores dificuldades de seu governo foi a resistência britânica. Para enfraquecer o Reino Unido economicamente, Napoleão instituiu o Bloqueio Continental, que proibia os países europeus de comercializar com os britânicos. A medida prejudicou economias locais e foi amplamente descumprida. Em 1808, a intervenção francesa na Espanha desencadeou uma guerra prolongada, marcada pela resistência popular e pelo apoio britânico aos espanhóis.</p>
+
+            <p>Em 1812, Napoleão invadiu a Rússia para obrigar o czar Alexandre I a respeitar o bloqueio econômico. A campanha terminou em desastre: os russos recuaram, destruíram recursos que poderiam abastecer os invasores e evitaram uma batalha decisiva até que o avanço francês se tornasse insustentável. O frio, a fome, as doenças e os ataques russos destruíram grande parte do exército napoleônico durante a retirada.</p>
+
+            <p>Após essa derrota, várias potências europeias se uniram contra a França. Em 1813, Napoleão foi derrotado na Batalha de Leipzig e, no ano seguinte, os exércitos inimigos invadiram a França. Em 1814, ele abdicou e foi enviado para a ilha de Elba. Contudo, em 1815, escapou e retornou ao poder por um breve período conhecido como os Cem Dias.</p>
+
+            <p>Seu retorno terminou na Batalha de Waterloo, em junho de 1815, quando as forças britânicas e prussianas derrotaram definitivamente seu exército. Napoleão abdicou novamente e foi exilado na distante ilha de Santa Helena, no Atlântico Sul, onde morreu em 1821, aos 51 anos.</p>
+
+            <p>O legado de Napoleão permanece controverso. Ele ajudou a consolidar transformações jurídicas e administrativas decorrentes da Revolução Francesa, influenciando sistemas legais de diversos países. Ao mesmo tempo, estabeleceu um regime autoritário, restringiu liberdades políticas, restaurou a escravidão nas colônias francesas em 1802 e conduziu guerras que devastaram a Europa. Sua trajetória representa tanto a difusão de reformas modernas quanto os perigos da concentração de poder e da ambição imperial.</p>
+
+        </main>
+
+        <!-- Imagem lateral direita -->
+        <aside class="lateral">
+            <img
+                src="https://cdn.pixabay.com/photo/2012/10/25/23/28/napoleon-bonaparte-62860_1280.jpg"
+                alt="Napoleão durante a campanha de Waterloo"
+            >
+        </aside>
+
+    </div>
+
+    <script>
+        const texto = document.getElementById("centraliza");
+
+        texto.addEventListener("mouseenter", () => {
+            texto.style.color = "red";
+        });
+
+        texto.addEventListener("mouseleave", () => {
+            texto.style.color = "white";
+        });
+    </script>
+
+</body>
+</html>
